@@ -1,0 +1,100 @@
+[
+
+  {
+    "name": "Educational Platform",
+    "desc": "Educational Platform built using HTML, CSS, JavaScript",
+    "image": "tdemy",
+    "category": "basicweb",
+    "links": {
+      "view": "https://skafzal-04.github.io/Tdemy/",
+      "code": "https://github.com/SkAfzal-04/Tdemy"
+    }
+  },
+  
+  {
+    "name": "PULSE.EXE",
+    "desc": "Yearly technical event of MCKVIE",
+    "image": "pulse.exe",
+    "category": "mern",
+    "links": {
+      "view": "https://pulseexe-2k24.vercel.app",
+      "code": "https://github.com/SkAfzal-04/Pulse.EXE-2K24"
+    }
+  },
+
+  {
+    "name": "Simple Calculator",
+    "desc": "This is a simple calculator using HTML,CSS & JavaScript",
+    "image": "calculator",
+    "category": "basicweb",
+    "links": {
+      "view": "https://skafzal-04.github.io/CALCULATOR/",
+      "code": "https://github.com/SkAfzal-04/CALCULATOR"
+    }
+  },
+  {
+    "name": "Weather Forecasting",
+    "desc": "This website predicts the weather for a region for future 5 days . It uses API to gather data",
+    "image": "weather_forecast",
+    "category": "mern",
+    "links": {
+      "view": "https://skafzal-04.github.io/weather-forecast/",
+      "code": "https://github.com/SkAfzal-04/weather-forecast"
+    }
+  },
+
+  {
+    "name": "Portfolio Website",
+    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
+    "image": "portfolio1",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+
+  {
+    "name": "Coding Platform",
+    "desc": "A competitive coding platform where the user can't see his/her typing",
+    "image": "blind-coding",
+    "category": "mern",
+    "links": {
+      "view": "https://blind-coding-platform.vercel.app/",
+      "code": "https://github.com/SkAfzal-04/Blind-Coding-platform"
+    }
+  },
+
+  {
+    "name": "WebChat Website",
+    "desc": "It's a web based chat app made using popular javaScript library Socket IO. Allows multiple users to connect.",
+    "image": "chat",
+    "category": "mern",
+    "links": {
+      "view": "https://let-s-chat-eight.vercel.app/",
+      "code": "https://github.com/SkAfzal-04/Let-s-Chat"
+    }
+  },
+  {
+    "name": "Chatting Platform",
+    "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
+    "image": "chat_adv",
+    "category": "mern",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/SkAfzal-04/chatting-platform"
+    }
+  },
+
+  {
+    "name": "Trace.IT",
+    "desc": "Yearly technical event of MCKVIE",
+    "image": "trace-it",
+    "category": "mern",
+    "links": {
+      "view": "https://trace-it-2k24.vercel.app/",
+      "code": "https://github.com/SkAfzal-04/TraceIT-2K24"
+    }
+  }
+
+]
