@@ -81,7 +81,7 @@
     "image": "chat_adv",
     "category": "mern",
     "links": {
-      "view": "#",
+      "view": "error",
       "code": "https://github.com/SkAfzal-04/chatting-platform"
     }
   },
