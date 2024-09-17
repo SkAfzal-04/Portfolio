@@ -46,11 +46,11 @@
   {
     "name": "Portfolio Website",
     "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
-    "image": "portfolio1",
+    "image": "portfolio-afzal",
     "category": "basicweb",
     "links": {
       "view": "#",
-      "code": "#"
+      "code": "https://github.com/SkAfzal-04/Portfolio"
     }
   },
 
@@ -81,7 +81,7 @@
     "image": "chat_adv",
     "category": "mern",
     "links": {
-      "view": "#",
+      "view": "error",
       "code": "https://github.com/SkAfzal-04/chatting-platform"
     }
   },
