@@ -34,13 +34,14 @@ document.addEventListener('visibilitychange',
 function getProjects() {
     return fetch("projects.json")
         .then(response => response.json())
-        .then(data => {
-            return data
+        .then(projects => {
+            return projects
         });
 }
 
 
 function showProjects(projects) {
+
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
     projects.forEach(project => {
