@@ -120,3 +120,90 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const themeIcon = document.getElementById('theme-icon');
+    const header = document.querySelector('header');
+    const menu = document.getElementById('menu');
+    const btnHoverStyle=document.querySelector('.backbtn .btn');
+    const checkedButton = document.querySelector('.work .button-group .btn.is-checked');
+    const buttonGroup = document.querySelectorAll('.work .button-group .btn');
+
+
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        applyDarkTheme();  // Apply dark theme if saved
+    }
+
+    themeIcon.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-theme')) {
+            applyLightTheme();  // Switch to light theme
+            localStorage.setItem('theme', 'light');  // Save theme preference
+        } else {
+            applyDarkTheme();  // Switch to dark theme
+            localStorage.setItem('theme', 'dark');  // Save theme preference
+        }
+    });
+
+    // Functions to apply themes
+    function applyDarkTheme() {
+        document.body.classList.add('dark-theme');
+        header.classList.add('dark-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeIcon.style.color = "#ffffff";  // Change icon color
+        menu.style.color = "#ffffff";  // Change menu icon color
+        btnHoverStyle.addEventListener('mouseover', () => {
+            btnHoverStyle.style.background = "#000";
+            btnHoverStyle.style.color = "cyan";
+            btnHoverStyle.style.border= '2px solid #000';
+        });
+        btnHoverStyle.addEventListener('mouseout', () => {
+            btnHoverStyle.style.background = "";  // Reset when not hovering
+            btnHoverStyle.style.color = "#fff";
+            btnHoverStyle.style.border= '';
+        });
+        checkedButton.style.backgroundColor = "#000";  // Dark theme background
+        checkedButton.style.color = "cyan";
+        buttonGroup.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.backgroundColor = "#000";  // Dark theme hover background
+                button.style.color = "cyan";  // Dark theme hover text color
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.backgroundColor = "";  // Reset background
+                button.style.color = "";  // Reset text color
+            });
+        });
+    }
+
+    function applyLightTheme() {
+        document.body.classList.remove('dark-theme');
+        header.classList.remove('dark-theme');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeIcon.style.color = "";  // Reset icon color
+        menu.style.color = "";  // Reset menu icon color
+        btnHoverStyle.addEventListener('mouseover', () => {
+            btnHoverStyle.style.background = "";
+            btnHoverStyle.style.color = "";
+        });
+        btnHoverStyle.addEventListener('mouseout', () => {
+            btnHoverStyle.style.background = "";  // Reset when not hovering
+            btnHoverStyle.style.color = "";
+        });
+        checkedButton.style.backgroundColor = "";  // Dark theme background
+        checkedButton.style.color = "";
+              // Reset hover styles for light theme
+              buttonGroup.forEach(button => {
+                button.addEventListener('mouseover', () => {
+                    button.style.backgroundColor = "#fff";  // Light theme hover background
+                    button.style.color = "#000";  // Light theme hover text color
+                });
+                button.addEventListener('mouseout', () => {
+                    button.style.backgroundColor = "";  // Reset background
+                    button.style.color = "";  // Reset text color
+                });
+            });
+    }
+});

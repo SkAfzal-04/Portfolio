@@ -83,11 +83,11 @@ header {
   padding-left: 3rem;
 }
 .theme-toggle i {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.theme-toggle.sun i {
-  transform: rotate(360deg);
+.theme-toggle .fa-sun {
+  transform: rotate(180deg); /* Rotate the sun for smoother effect */
 }
 section {
   min-height: 100vh;
@@ -264,12 +264,20 @@ header.dark-theme .navbar ul li a:hover {
   flex: 1 1 40rem;
   z-index: 1;
 }
+
+
+.home .image img.fade-out {
+  opacity: 0;
+}
+
 .home .image img {
   width: 70%;
   margin-left: 6rem;
   border-radius: 50%;
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); */
   cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);

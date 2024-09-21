@@ -250,41 +250,80 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeIcon = document.getElementById('theme-icon');
     const header = document.querySelector('header');
     const heroSection = document.querySelector('.home');
-    const ham=document.getElementById('menu');
-    const about=document.querySelector('.about');
-    const education=document.querySelector('.education');
-    const contact=document.querySelector('.contact');
-    
+    const ham = document.getElementById('menu');
+    const about = document.querySelector('.about');
+    const education = document.querySelector('.education');
+    const contact = document.querySelector('.contact');
+    const btnHoverStyle=document.querySelector('.work .viewall .btn');
+    const afzalImage = document.querySelector('.image img');
+
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        applyDarkTheme();  // Apply dark theme if saved
+    }
+
     themeIcon.addEventListener('click', () => {
-        // Toggle the dark-theme class on the body and header
-        document.body.classList.toggle('dark-theme');
-        header.classList.toggle('dark-theme');
-        heroSection.classList.toggle('dark-theme');
-        about.classList.toggle('dark-theme');
-        education.classList.toggle('dark-theme');
-        contact.classList.toggle('dark-theme');
-
-
-        // Toggle theme icon
-        if (themeIcon.classList.contains('fa-moon')) {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-            themeIcon.style.color = "#ffffff";  // Change icon color to white
-            updateParticleColor("#ffffff");
-            ham.style.color="#ffffff";
-       
-
+        if (document.body.classList.contains('dark-theme')) {
+            applyLightTheme();  // Switch to light theme
+            localStorage.setItem('theme', 'light');  // Save theme preference
         } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-            themeIcon.style.color = '';  // Reset icon color
-            updateParticleColor("#000000");
-            ham.style.color="";
+            applyDarkTheme();  // Switch to dark theme
+            localStorage.setItem('theme', 'dark');  // Save theme preference
         }
     });
-});
 
+    // Functions to apply themes
+    function applyDarkTheme() {
+        document.body.classList.add('dark-theme');
+        header.classList.add('dark-theme');
+        heroSection.classList.add('dark-theme');
+        about.classList.add('dark-theme');
+        education.classList.add('dark-theme');
+        contact.classList.add('dark-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeIcon.style.color = "#ffffff";
+        updateParticleColor("#ffffff");
+        ham.style.color = "#ffffff";
+        btnHoverStyle.addEventListener('mouseover', () => {
+            btnHoverStyle.style.background = "#000";
+            btnHoverStyle.style.color = "cyan";
+            btnHoverStyle.style.border= '2px solid #000';
+        });
+        btnHoverStyle.addEventListener('mouseout', () => {
+            btnHoverStyle.style.background = "";  // Reset when not hovering
+            btnHoverStyle.style.color = "#fff";
+            btnHoverStyle.style.border= '';
+        });
+        afzalImage.src = './assets/images/Afzal.png';  // Set dark theme image
+    }
+
+    function applyLightTheme() {
+        document.body.classList.remove('dark-theme');
+        header.classList.remove('dark-theme');
+        heroSection.classList.remove('dark-theme');
+        about.classList.remove('dark-theme');
+        education.classList.remove('dark-theme');
+        contact.classList.remove('dark-theme');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeIcon.style.color = "";
+        updateParticleColor("#000000");
+        ham.style.color = "";
+        btnHoverStyle.addEventListener('mouseover', () => {
+            btnHoverStyle.style.background = "";
+            btnHoverStyle.style.color = "";
+        });
+        btnHoverStyle.addEventListener('mouseout', () => {
+            btnHoverStyle.style.background = "";  // Reset when not hovering
+            btnHoverStyle.style.color = "";
+        });
+        afzalImage.src = './assets/images/favicon.png';  // Set light theme image
+    }
+});
