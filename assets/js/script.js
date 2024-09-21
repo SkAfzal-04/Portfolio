@@ -59,7 +59,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Sk Mahammad Afzal";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -249,3 +249,42 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeIcon = document.getElementById('theme-icon');
+    const header = document.querySelector('header');
+    const heroSection = document.querySelector('.home');
+    const ham=document.getElementById('menu');
+    const about=document.querySelector('.about');
+    const education=document.querySelector('.education');
+    const contact=document.querySelector('.contact');
+    
+    themeIcon.addEventListener('click', () => {
+        // Toggle the dark-theme class on the body and header
+        document.body.classList.toggle('dark-theme');
+        header.classList.toggle('dark-theme');
+        heroSection.classList.toggle('dark-theme');
+        about.classList.toggle('dark-theme');
+        education.classList.toggle('dark-theme');
+        contact.classList.toggle('dark-theme');
+
+
+        // Toggle theme icon
+        if (themeIcon.classList.contains('fa-moon')) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            themeIcon.style.color = "#ffffff";  // Change icon color to white
+            updateParticleColor("#ffffff");
+            ham.style.color="#ffffff";
+       
+
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            themeIcon.style.color = '';  // Reset icon color
+            updateParticleColor("#000000");
+            ham.style.color="";
+        }
+    });
+});
+

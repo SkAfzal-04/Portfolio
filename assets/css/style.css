@@ -19,6 +19,7 @@ html {
 body {
   background: #f7f7f7;
   font-family: "Poppins", sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 *::selection {
@@ -72,6 +73,21 @@ header {
   height: 6.5rem;
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.theme-toggle {
+  font-size: 1.8rem;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding-left: 3rem;
+}
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle.sun i {
+  transform: rotate(360deg);
 }
 section {
   min-height: 100vh;
@@ -91,12 +107,16 @@ header .logo {
   font-weight: 800;
   text-decoration: none;
   color: #0e2431;
+  transition: color 0.5s ease;
 }
 header .logo i {
   font-size: 2.2rem;
 }
 header .logo:hover {
   color: #fc8c05;
+}
+header span{
+  display: inline-flex;
 }
 header .navbar ul {
   list-style: none;
@@ -121,6 +141,31 @@ header .navbar ul li a:hover {
   border-bottom: 0.2rem solid #011aff;
   padding: 0.5rem 0;
 }
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background: #333; /* Dark background */
+}
+
+header.dark-theme {
+  background-color: #444; /* Dark header background */
+}
+header.dark-theme .logo{
+  color: rgb(0 162 255);
+}
+header.dark-theme .logo:hover {
+  color: #fc8c05;
+}
+header.dark-theme .navbar ul li a {
+  color: white; /* Light link color in dark theme */
+}
+
+
+header.dark-theme .navbar ul li a.active,
+header.dark-theme .navbar ul li a:hover {
+  color: cyan;
+  border-bottom: 0.2rem solid cyan;
+}
 /* navbar ends */
 
 /* hamburger icon starts*/
@@ -133,6 +178,14 @@ header .navbar ul li a:hover {
 @media (max-width: 768px) {
   #menu {
     display: block;
+  }
+  header span{
+   flex-direction: row-reverse;
+  }
+  .theme-toggle {
+    font-size: 2rem;
+    color: black;
+    padding-right: 2rem;
   }
   header .navbar {
     position: fixed;
@@ -272,6 +325,31 @@ header .navbar ul li a:hover {
 .home .btn:hover i {
   transform: translateX(5px);
 }
+
+/* Dark theme styles for hero section */
+
+
+.home.dark-theme h2 {
+  color: cyan; /* Cyan color for the name */
+}
+
+.home.dark-theme h2 span {
+  color: #39FF14; /* Neon green for "Afzal" */
+}
+
+.home.dark-theme p {
+  color: #ddd; /* Light gray for description */
+}
+
+.home.dark-theme .btn {
+  background-color: #011aff; /* Button background color */
+  color: white; /* Button text color */
+}
+
+.home.home.dark-theme .content p span{
+  color: rgb(197, 255, 19);
+}
+
 /* social icons start */
 .socials {
   position: relative;
@@ -435,6 +513,25 @@ header .navbar ul li a:hover {
 .resumebtn .btn:hover i {
   transform: translateX(5px);
 }
+/* Dark theme styles for about section */
+.about.dark-theme  {
+  background: #333;
+  color: #fff;
+}
+.about.dark-theme .row .content h3 {
+  color: cyan;
+}
+.about.dark-theme .row .content .tag{
+  color: #6034ff;
+}
+.about.dark-theme .heading{
+  color: #fff;
+}
+.about.dark-theme .heading span{
+  color: rgb(196 20 255);
+}
+
+
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
   .about .row .image {
@@ -608,7 +705,32 @@ header .navbar ul li a:hover {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
 }
-
+/* dark theme */
+.education.dark-theme  {
+  background: #333;
+  color: #fff;
+}
+.education.dark-theme .row .content h3 {
+  color: cyan;
+}
+.education.dark-theme .row .content .tag{
+  color: #6034ff;
+}
+.education.dark-theme .heading{
+  color: #fff;
+}
+.education.dark-theme .heading span{
+  color: rgb(196 20 255);
+}
+.education.dark-theme .box-container .box .content  {
+  background: #333;
+}
+.education.dark-theme .box-container .box .content h3{
+color: #2995ff;
+}
+.education.dark-theme h4{
+color: rgb(81 255 37);
+}
 /* education media queries starts*/
 @media screen and (max-width: 600px) {
   .education .box-container .box {
@@ -1065,6 +1187,38 @@ form .button-area {
 }
 .button-area button:hover i {
   left: 8px;
+}
+/* dark theme */
+.contact.dark-theme  {
+  background: #333;
+  color: #fff;
+}
+.contact.dark-theme .row .content h3 {
+  color: cyan;
+}
+
+.contact.dark-theme .heading{
+  color: #fff;
+}
+.contact.dark-theme .heading span{
+  color: rgb(22 102 255);
+}
+.contact.dark-theme .container .content{
+background: #333;
+box-shadow: 2px 3px 4px 5px cornflowerblue;
+}
+.contact.dark-theme form .field input, 
+.contact.dark-theme form .message textarea{
+background: #060606;
+border: 2px solid darkturquoise;}
+
+.contact.dark-theme form .field input:focus ~ i,
+.contact.dark-theme .message textarea:focus ~ i {
+  color: rgb(3, 181, 163);
+}
+.contact.dark-theme form .field input,
+form .message textarea{
+  color: #fff;
 }
 /* contact section media queries starts */
 @media (max-width: 900px) {
