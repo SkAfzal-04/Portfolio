@@ -787,6 +787,7 @@ color: rgb(81 255 37);
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem;
+
 }
 .work .box-container .box {
   flex: 1 1 30rem;

@@ -280,6 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Functions to apply themes
     function applyDarkTheme() {
+        afzalImage.classList.add('fade-out');
+        setTimeout(() => {
         document.body.classList.add('dark-theme');
         header.classList.add('dark-theme');
         heroSection.classList.add('dark-theme');
@@ -302,9 +304,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btnHoverStyle.style.border= '';
         });
         afzalImage.src = './assets/images/Afzal.png';  // Set dark theme image
+        afzalImage.classList.remove('fade-out');  // Fade back in after image changes
+    }, 500);
     }
 
     function applyLightTheme() {
+        afzalImage.classList.add('fade-out');
+        setTimeout(() => {
         document.body.classList.remove('dark-theme');
         header.classList.remove('dark-theme');
         heroSection.classList.remove('dark-theme');
@@ -325,5 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnHoverStyle.style.color = "";
         });
         afzalImage.src = './assets/images/favicon.png';  // Set light theme image
+        afzalImage.classList.remove('fade-out');  // Fade back in after image changes
+    }, 500);
     }
 });
