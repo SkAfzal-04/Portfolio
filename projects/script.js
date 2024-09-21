@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.style.color = "cyan";  // Dark theme hover text color
             });
             button.addEventListener('mouseout', () => {
-                button.style.backgroundColor = "";  // Reset background
-                button.style.color = "";  // Reset text color
+                button.style.backgroundColor = "#010124";  // Reset background
+                button.style.color = "#fff";  // Reset text color
             });
         });
     }
