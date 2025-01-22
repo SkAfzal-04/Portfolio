@@ -76,13 +76,13 @@
     }
   },
   {
-    "name": "Chatting Platform",
-    "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
-    "image": "chat_adv",
+    "name": "Fest Website",
+    "desc": "This project is built on the React for my college fest",
+    "image": "Utopia",
     "category": "mern",
     "links": {
-      "view": "error",
-      "code": "https://github.com/SkAfzal-04/chatting-platform"
+      "view": "https://utopia-ten-omega.vercel.app/",
+      "code": "https://github.com/SkAfzal-04/utopia"
     }
   },
 
