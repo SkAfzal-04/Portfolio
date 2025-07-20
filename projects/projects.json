@@ -1,62 +1,27 @@
 [
-
   {
-    "name": "Educational Platform",
-    "desc": "Educational Platform built using HTML, CSS, JavaScript",
-    "image": "tdemy",
-    "category": "basicweb",
-    "links": {
-      "view": "https://skafzal-04.github.io/Tdemy/",
-      "code": "https://github.com/SkAfzal-04/Tdemy"
-    }
-  },
-  
-  {
-    "name": "PULSE.EXE",
-    "desc": "Yearly technical event of MCKVIE",
-    "image": "pulse.exe",
+    "name": "Scanify",
+    "desc": "An advanced AI-powered system for inventory and staff management with forecasting, feedback analysis, and scoring capabilities.",
+    "image": "scanify",
     "category": "mern",
     "links": {
-      "view": "https://pulseexe-2k24.vercel.app",
-      "code": "https://github.com/SkAfzal-04/Pulse.EXE-2K24"
-    }
-  },
-
-  {
-    "name": "Simple Calculator",
-    "desc": "This is a simple calculator using HTML,CSS & JavaScript",
-    "image": "calculator",
-    "category": "basicweb",
-    "links": {
-      "view": "https://skafzal-04.github.io/CALCULATOR/",
-      "code": "https://github.com/SkAfzal-04/CALCULATOR"
+      "view": "https://scanify.vercel.app",
+      "code": "https://github.com/SkAfzal-04/Scanify"
     }
   },
   {
-    "name": "Weather Forecasting",
-    "desc": "This website predicts the weather for a region for future 5 days . It uses API to gather data",
-    "image": "weather_forecast",
-    "category": "mern",
-    "links": {
-      "view": "https://skafzal-04.github.io/weather-forcast/",
-      "code": "https://github.com/SkAfzal-04/weather-forecast"
-    }
-  },
-
-  {
-    "name": "Portfolio Website",
-    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
-    "image": "portfolio-afzal",
-    "category": "basicweb",
+    "name": "Food Delivery System",
+    "desc": "Food delivery system using Spring Boot and React with login, cart, order, payment gateway, and admin panel.",
+    "image": "food-delivery",
+    "category": "major",
     "links": {
       "view": "#",
-      "code": "https://github.com/SkAfzal-04/Portfolio"
+      "code": "https://github.com/SkAfzal-04/Food_Delivery_System"
     }
   },
-
   {
     "name": "Coding Platform",
-    "desc": "A competitive coding platform where the user can't see his/her typing",
+    "desc": "A competitive coding platform where the user can't see his/her typing.",
     "image": "blind-coding",
     "category": "mern",
     "links": {
@@ -64,10 +29,9 @@
       "code": "https://github.com/SkAfzal-04/Blind-Coding-platform"
     }
   },
-
   {
     "name": "WebChat Website",
-    "desc": "It's a web based chat app made using popular javaScript library Socket IO. Allows multiple users to connect.",
+    "desc": "It's a web-based chat app made using Socket.IO. Allows multiple users to connect and communicate in real-time.",
     "image": "chat",
     "category": "mern",
     "links": {
@@ -76,8 +40,28 @@
     }
   },
   {
+    "name": "Trace.IT",
+    "desc": "Yearly technical event of MCKVIE, built with React for event showcasing.",
+    "image": "trace-it",
+    "category": "mern",
+    "links": {
+      "view": "https://trace-it-2k24.vercel.app/",
+      "code": "https://github.com/SkAfzal-04/TraceIT-2K24"
+    }
+  },
+  {
+    "name": "PULSE.EXE",
+    "desc": "Yearly technical event of MCKVIE.",
+    "image": "pulse.exe",
+    "category": "mern",
+    "links": {
+      "view": "https://pulseexe-2k24.vercel.app",
+      "code": "https://github.com/SkAfzal-04/Pulse.EXE-2K24"
+    }
+  },
+  {
     "name": "Fest Website",
-    "desc": "This project is built on the React for my college fest",
+    "desc": "This project is built using React for my college fest.",
     "image": "Utopia",
     "category": "mern",
     "links": {
@@ -85,16 +69,44 @@
       "code": "https://github.com/SkAfzal-04/utopia"
     }
   },
-
   {
-    "name": "Trace.IT",
-    "desc": "Yearly technical event of MCKVIE",
-    "image": "trace-it",
+    "name": "Weather Forecasting",
+    "desc": "This website predicts the weather for a region for the next 5 days using an API.",
+    "image": "weather_forecast",
     "category": "mern",
     "links": {
-      "view": "https://trace-it-2k24.vercel.app/",
-      "code": "https://github.com/SkAfzal-04/TraceIT-2K24"
+      "view": "https://skafzal-04.github.io/weather-forcast/",
+      "code": "https://github.com/SkAfzal-04/weather-forecast"
+    }
+  },
+  {
+    "name": "Portfolio Website",
+    "desc": "Personal Portfolio Website showcasing skills and projects.",
+    "image": "portfolio-afzal",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/SkAfzal-04/Portfolio"
+    }
+  },
+  {
+    "name": "Educational Platform",
+    "desc": "Educational platform built using HTML, CSS, JavaScript.",
+    "image": "tdemy",
+    "category": "basicweb",
+    "links": {
+      "view": "https://skafzal-04.github.io/Tdemy/",
+      "code": "https://github.com/SkAfzal-04/Tdemy"
+    }
+  },
+  {
+    "name": "Simple Calculator",
+    "desc": "This is a simple calculator using HTML, CSS & JavaScript.",
+    "image": "calculator",
+    "category": "basicweb",
+    "links": {
+      "view": "https://skafzal-04.github.io/CALCULATOR/",
+      "code": "https://github.com/SkAfzal-04/CALCULATOR"
     }
   }
-
 ]

@@ -55,7 +55,14 @@ $(document).ready(function () {
     // <!-- emailjs to mail contact form data -->
 
 });
-
+      window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.style.display = 'none';
+      }
+    }, 3000); // 3000 milliseconds = 3 seconds
+  });
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {

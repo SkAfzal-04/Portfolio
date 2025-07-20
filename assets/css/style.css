@@ -580,6 +580,9 @@ header.dark-theme .navbar ul li a:hover {
   color: #fff;
   border-radius: 1rem;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   margin: auto;
   margin-top: 2rem;
