@@ -10,6 +10,16 @@
     }
   },
   {
+    "name": "StyleHub",
+    "desc": "A full-stack fashion e-commerce platform featuring product management, authentication, Stripe payments, Cloudinary integration, and a complete admin-customer flow. Built using Node.js, Express, MongoDB, and React.",
+    "image": "ecommerce",
+    "category": "mern",
+    "links": {
+      "view": "https://e-commerce-psi-nine-50.vercel.app/",
+      "code": "https://github.com/SkAfzal-04/e-commerce"
+    }
+  },
+  {
     "name": "Food Delivery System",
     "desc": "Food delivery system using Spring Boot and React with login, cart, order, payment gateway, and admin panel.",
     "image": "food-delivery",
