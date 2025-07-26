@@ -38,31 +38,67 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
+    $("#contact-form").submit(function(event) {
+      event.preventDefault();
+      emailjs.init("Sepi7mmyFVbMccVCk");
+      const btn = document.getElementById('submit-btn');
+      const form = this;
+      
+      // Set loading states
+      btn.classList.add('sending');
+      document.getElementById('form-loader').style.display = 'flex';
+      document.getElementById('form-status').style.display = 'none';
+      
+      // Generate formatted timestamp
+      const now = new Date();
+      const formattedTimestamp = now.toLocaleString('en-IN', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+      $("#timestamp").val(formattedTimestamp);
+      
+      // Send emails
+      emailjs.sendForm("service_vz2voiv", "template_contact", "#contact-form")
+        .then(function(response) {
+          console.log("Email sent to contact!", response.status, response.text);
+          return emailjs.sendForm("service_vz2voiv", "template_admin", "#contact-form");
+        })
+        .then(function(response) {
+          console.log("Email sent to admin!", response.status, response.text);
+          
+          // Success animations
+          btn.classList.remove('sending');
+          btn.classList.add('success');
+          document.getElementById('form-loader').style.display = 'none';
+          
+          // Reset form after animations complete
+          setTimeout(() => {
+            form.reset();
+            btn.classList.remove('success');
+            btn.innerHTML = '<span class="btn-text">Submit</span> <i class="fa fa-paper-plane btn-icon"></i>';
+          }, 2000);
+        })
+        .catch(function(error) {
+          console.error("Failed to send email", error);
+          
+          // Error handling
+          btn.classList.remove('sending');
+          document.getElementById('form-loader').style.display = 'none';
+          document.getElementById('form-status').innerHTML = 
+            '<i class="fas fa-exclamation-circle"></i> Message sending failed. Please try again.';
+          document.getElementById('form-status').style.display = 'block';
+          document.getElementById('form-status').className = 'form-status error';
+        });
     });
     // <!-- emailjs to mail contact form data -->
 
 });
-      window.addEventListener('load', () => {
-    setTimeout(() => {
-      const loader = document.getElementById('loader');
-      if (loader) {
-        loader.style.display = 'none';
-      }
-    }, 3000); // 3000 milliseconds = 3 seconds
-  });
+   
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
@@ -169,13 +205,13 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 
 
 // pre loader start
-// function loader() {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
-// function fadeOut() {
-//     setInterval(loader, 500);
-// }
-// window.onload = fadeOut;
+function loader() {
+    document.querySelector('.loader-container').classList.add('fade-out');
+}
+function fadeOut() {
+    setInterval(loader, 1000);
+}
+window.onload = fadeOut;
 // pre loader end
 
 // disable developer mode
