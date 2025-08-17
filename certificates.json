@@ -1,0 +1,64 @@
+[
+    {
+        "title": "Euphoria Internship Certificate",
+        "issuer": "Euphoria GenX & MCKV Institute of Engineering",
+        "description": "Successfully completed the Skill Development and Internship Programme, working on Scanify | Smart Retail Management Project",
+        "tags": [
+            "Internship",
+            "Fullstack Development",
+            "Smart Retail",
+            "Project Experience"
+        ],
+        "issued": "2025",
+        "image": "assets/certificates/Euphoria.jpg"
+    },
+    {
+        "title": "Getting Started with Artificial Intelligence",
+        "issuer": "IBM SkillsBuild",
+        "description": "Certificate of completion for foundational concepts in Artificial Intelligence from IBM SkillsBuild",
+        "tags": [
+            "Artificial Intelligence",
+            "AI Basics",
+            "IBM SkillsBuild"
+        ],
+        "issued": "2025",
+        "image": "assets/certificates/IBM.jpeg"
+    },
+    {
+        "title": "Front End Development - HTML",
+        "issuer": "Great Learning",
+        "description": "Successfully completed a free online course on Front End Development - HTML",
+        "tags": [
+            "Web Development",
+            "HTML",
+            "Frontend"
+        ],
+        "issued": "2023",
+        "image": "assets/certificates/HTML.jpg"
+    },
+    {
+        "title": "Front End Development - CSS",
+        "issuer": "Great Learning",
+        "description": "Successfully completed a free online course on Front End Development - CSS",
+        "tags": [
+            "Web Development",
+            "CSS",
+            "Frontend"
+        ],
+        "issued": "2023",
+        "image": "assets/certificates/CSS.jpg"
+    },
+    {
+        "title": "Website Designing Certification",
+        "issuer": "Educure",
+        "description": "Successfully completed 3 months of website designing using HTML, CSS, and JavaScript with 88% marks, supervised by Anupam Barat (Senior Developer, Vikasietun Technology) and examined by Souvik Biswas (Senior Developer, Alumnus Software Limited).",
+        "tags": [
+            "Web Development",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "issued": "2023",
+        "image": "assets/certificates/JS.jpeg"
+    }
+]

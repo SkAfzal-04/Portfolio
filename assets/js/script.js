@@ -114,7 +114,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "web development"],
+    strings: ["frontend development", "backend development", "web designing", "web development","fullstack development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -147,6 +147,51 @@ function showSkills(skills) {
     skillsContainer.innerHTML = skillHTML;
 }
 
+// Fetch certificates
+async function fetchCertificates() {
+    const response = await fetch("certificates.json");
+    return await response.json();
+}
+
+// Show certificates (similar to skills & projects)
+function showCertificates(certificates) {
+    let container = document.getElementById("certificates-container");
+    let certificateHTML = "";
+
+    certificates.forEach(cert => {
+        certificateHTML += `
+        <div class="certificate-card tilt">
+          <img src="${cert.image}" alt="${cert.title}" draggable="false" />
+          <div class="content">
+            <h3>${cert.title}</h3>
+            <p class="issuer">${cert.issuer}</p>
+            <p class="description">${cert.description}</p>
+            <div class="tags">
+              ${cert.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+            <p class="date">📅 Issued: ${cert.issued}</p>
+          </div>
+        </div>`;
+    });
+
+    container.innerHTML = certificateHTML;
+
+    // Tilt effect for cards
+    VanillaTilt.init(document.querySelectorAll(".certificate-card.tilt"), {
+        max: 15,
+    });
+
+    // Scroll reveal for certificates
+    srtop.reveal('.certificates-section .certificate-card', { interval: 200 });
+}
+
+// Load and display
+fetchCertificates().then(data => {
+    showCertificates(data);
+});
+
+
+//Projects
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
@@ -282,12 +327,20 @@ srtop.reveal('.skills .container .bar', { delay: 400 });
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
 
+/* SCROLL CERTIFICATES */
+srtop.reveal('.certificates-section h2', { delay: 200 });
+srtop.reveal('.certificates-section .certificates-grid .certificate-card', { interval: 200 });
+
 /* SCROLL PROJECTS */
 srtop.reveal('.work .box', { interval: 200 });
+
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
 srtop.reveal('.experience .timeline .container', { interval: 400 });
+
+
+
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
@@ -301,9 +354,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const ham = document.getElementById('menu');
     const about = document.querySelector('.about');
     const education = document.querySelector('.education');
+    const certificate=document.querySelector('.certificates-section');
     const contact = document.querySelector('.contact');
     const btnHoverStyle=document.querySelector('.work .viewall .btn');
     const afzalImage = document.querySelector('.image img');
+
 
     // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem('theme');
@@ -330,6 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSection.classList.add('dark-theme');
         about.classList.add('dark-theme');
         education.classList.add('dark-theme');
+        certificate.classList.add('dark-theme');
         contact.classList.add('dark-theme');
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
@@ -359,6 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSection.classList.remove('dark-theme');
         about.classList.remove('dark-theme');
         education.classList.remove('dark-theme');
+        certificate.classList.remove('dark-theme');
         contact.classList.remove('dark-theme');
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon');
