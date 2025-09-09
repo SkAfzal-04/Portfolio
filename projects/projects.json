@@ -5,7 +5,7 @@
     "image": "scanify",
     "category": "mern",
     "links": {
-      "view": "https://scanify.vercel.app",
+      "view": "https://scanify-coral.vercel.app/",
       "code": "https://github.com/SkAfzal-04/Scanify"
     }
   },
